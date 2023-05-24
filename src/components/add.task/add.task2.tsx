@@ -3,7 +3,11 @@ import { Task } from "../../models/task";
 
 type FormState = Pick<Task, "title" | "owner">;
 
-export function AddTask2() {
+type PropsType = {
+  handleAdd: (task: Task) => void;
+};
+
+export function AddTask2({ handleAdd }: PropsType) {
   const [formState, setFormState] = useState<FormState>({
     title: "",
     owner: "",
@@ -23,6 +27,7 @@ export function AddTask2() {
     event.preventDefault();
     const task = new Task(formState.title, formState.owner);
     console.log(task);
+    handleAdd(task);
   };
 
   return (

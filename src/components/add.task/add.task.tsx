@@ -1,7 +1,11 @@
 import { SyntheticEvent } from "react";
 import { Task } from "../../models/task";
 
-export function AddTask() {
+type PropsType = {
+  handleAdd: (task: Task) => void;
+};
+
+export function AddTask({ handleAdd }: PropsType) {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
@@ -10,6 +14,7 @@ export function AddTask() {
       (form.elements.namedItem("owner") as HTMLInputElement).value
     );
     console.log(task);
+    handleAdd(task);
   };
 
   return (

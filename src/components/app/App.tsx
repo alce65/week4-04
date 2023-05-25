@@ -9,6 +9,7 @@ export function App() {
   const options: MenuOptions = [
     { url: "", label: "Home" },
     { url: "todo", label: "Todo List" },
+    { url: "notes", label: "Notes List" },
   ];
 
   return (

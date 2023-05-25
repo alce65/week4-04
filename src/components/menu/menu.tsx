@@ -1,5 +1,6 @@
 import { MenuOptions } from "../../types/menu.options";
 import { Link } from "react-router-dom";
+import "./menu.scss";
 
 type PropsType = {
   options: MenuOptions;

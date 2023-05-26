@@ -37,3 +37,30 @@ Nuevos conceptos
   - Agrupando múltiples fetch
 - Paginación
 - Página de detalle
+
+Testing
+
+```shell
+  npm i jest @types/jest ts-jest jest-ts-webcompat-resolver
+  npm i jest-environment-jsdom
+  npm i @testing-library/react @testing-library/jest-dom @testing-library/user-event
+```
+
+eslintrc
+
+```js
+ env: { jest: true }
+ ```
+
+ config
+
+ ```js
+ /** @type {import('ts-jest').JestConfigWithTsJest} */
+
+export default {
+  preset: 'ts-jest',
+  testEnvironment: 'jsdom',
+  testPathIgnorePatterns: ['dist'],
+  resolver: 'jest-ts-webcompat-resolver',
+};
+```

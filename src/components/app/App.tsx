@@ -10,6 +10,7 @@ export function App() {
     { url: "", label: "Home" },
     { url: "todo", label: "Todo List" },
     { url: "notes", label: "Notes List" },
+    { url: "books", label: "Books" },
   ];
 
   return (

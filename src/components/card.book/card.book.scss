@@ -1,0 +1,11 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  margin: 0;
+  padding: 0.4rem;
+
+  i {
+    cursor: pointer;
+  }
+}

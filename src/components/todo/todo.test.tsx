@@ -10,10 +10,13 @@ jest.mock("../add.task/add.task");
 jest.mock("../add.task/add.task2");
 jest.mock("../card.task/card.task");
 
+const mockTask = new Task("Test", "Pepe");
+mockTask.id = 1;
+
 describe("Given ToDo Component", () => {
   describe("When it is instantiated", () => {
     (useTasks as jest.Mock).mockReturnValue({
-      tasks: [new Task("Test", "Pepe")],
+      tasks: [mockTask],
       handleAdd: jest.fn(),
       handleDelete: jest.fn(),
       handleUpdate: jest.fn(),

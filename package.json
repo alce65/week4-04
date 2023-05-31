@@ -9,7 +9,7 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest --watchAll --coverage",
-    "test:prod": "jest --watchAll --collect-coverage --watchAll=false --passWithNoTests"
+    "test:prod": "jest --watchAll --coverage --watchAll=false --passWithNoTests"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

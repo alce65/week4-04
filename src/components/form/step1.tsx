@@ -1,4 +1,3 @@
-import { SyntheticEvent } from "react";
 import { User } from "./form";
 
 type PropsType = {
@@ -7,7 +6,7 @@ type PropsType = {
 };
 
 export function Step1({ changeStep, updateUser }: PropsType) {
-  const handleClick = (even: SyntheticEvent) => {
+  const handleClick = () => {
     const user = {};
     updateUser(user);
     changeStep(2);

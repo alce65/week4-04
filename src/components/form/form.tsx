@@ -5,7 +5,7 @@ import { Step1 } from "./step1";
 import { Step2 } from "./step2";
 
 export type User = {
-  [key: string]: any;
+  [key: string]: string;
 };
 
 export function Form() {
@@ -17,7 +17,6 @@ export function Form() {
   };
 
   const updateUser = (user: User) => {
-    //
     setUser(user);
   };
 

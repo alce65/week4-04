@@ -3,7 +3,7 @@ export const actionTypes = {
   delete: "books@delete",
   create: "books@create",
   update: "books@update",
-};
+} as const;
 
 export enum actionTypesE {
   load = "books@load",

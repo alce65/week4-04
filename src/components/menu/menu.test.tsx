@@ -4,8 +4,8 @@ import "@testing-library/jest-dom";
 import { Menu } from "./menu";
 import { MenuOptions } from "../../types/menu.options";
 
-describe("Given ", () => {
-  describe("When", () => {
+describe("Given Menu Componente", () => {
+  describe("When it is rendered with one option  ", () => {
     const options: MenuOptions = [{ url: "", label: "Test" }];
 
     render(
@@ -13,10 +13,12 @@ describe("Given ", () => {
         <Menu options={options}></Menu>
       </Router>
     );
-    const element = screen.getByRole("navigation");
+    const elementNav = screen.getByRole("navigation");
+    const elementOption = screen.getByText(options[0].label);
 
-    test("Then it should ...", () => {
-      expect(element).toBeInTheDocument();
+    test("Then the option should be in the document", () => {
+      expect(elementNav).toBeInTheDocument();
+      expect(elementOption).toBeInTheDocument();
     });
   });
 });

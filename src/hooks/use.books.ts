@@ -8,6 +8,7 @@ import * as ac from "../reducers/actions.creator";
 export function useBooks() {
   const initialState: BooksState = {
     books: [],
+    selectedBook: null,
   };
 
   // const [books, setBooks] = useState<Book[]>([]);
@@ -64,10 +65,16 @@ export function useBooks() {
     }
   };
 
+  const handleSelectBook = (book: Book) => {
+    dispatch(ac.selectBookAction(book));
+  };
+
   return {
     books: booksState.books,
+    selectedBook: booksState.selectedBook,
     handleAdd,
     handleUpdate,
     handleDelete,
+    handleSelectBook,
   };
 }

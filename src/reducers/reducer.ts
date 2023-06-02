@@ -8,6 +8,7 @@ import { actionTypes } from "./actions.types";
 
 export type BooksState = {
   books: Book[];
+  selectedBook: Book | null;
 };
 
 export const bookReducer = (state: BooksState, action: BookAction) => {
@@ -35,6 +36,19 @@ export const bookReducer = (state: BooksState, action: BookAction) => {
       return {
         ...state,
         books: state.books.filter((item) => item.id !== payload),
+      };
+
+    case actionTypes.selectBook:
+      payload = action.payload as Book;
+      return {
+        ...state,
+        selectedBook: payload,
+      };
+
+    case actionTypes.unSelectBook:
+      return {
+        ...state,
+        selectedBook: null,
       };
 
     default:

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../../context/app.context";
 import { Note } from "../../models/note";
 import "./card.note.scss";
+import { Link } from "react-router-dom";
 
 type PropsType = {
   item: Note;
@@ -32,9 +33,13 @@ export function CardNote({ item }: PropsType) {
         />
         Important
       </span>
-      <span>{item.id}</span>
-      <span>{item.title}</span>
-      <span>{item.author}</span>
+      <span>
+        <Link to={"/note-details/" + item.id}>
+          <span>{item.id}</span>
+          <span>{item.title}</span>
+          <span>{item.author}</span>
+        </Link>
+      </span>
       <i className="button" role="button" onClick={handleClick}>
         🗑️
       </i>

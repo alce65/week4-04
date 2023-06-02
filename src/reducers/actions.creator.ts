@@ -15,23 +15,36 @@ export function loadBookAction(payload: Book[]): BookAction {
   };
 }
 
-export function deleteBookAction(payload: number) {
+export function deleteBookAction(payload: number): BookAction {
   return {
     type: actionTypes.delete,
     payload,
   };
 }
 
-export function createBookAction(payload: Book) {
+export function createBookAction(payload: Book): BookAction {
   return {
     type: actionTypes.create,
     payload,
   };
 }
 
-export function updateBookAction(payload: Book) {
+export function updateBookAction(payload: Book): BookAction {
   return {
     type: actionTypes.update,
     payload,
+  };
+}
+
+export function selectBookAction(payload: Book): BookAction {
+  return {
+    type: actionTypes.selectBook,
+    payload,
+  };
+}
+
+export function unSelectBookAction() {
+  return {
+    type: actionTypes.selectBook,
   };
 }

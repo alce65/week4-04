@@ -24,9 +24,11 @@ export function CardTask({ item, handleUpdate, handleDelete }: PropsType) {
         checked={item.isCompleted}
         onChange={handleChange}
       />
-      <span>{item.id}</span>
-      <span>{item.title}</span>
-      <span>{item.owner}</span>
+      <span>
+        <span>{item.id}</span>
+        <span>{item.title}</span>
+        <span>{item.owner}</span>
+      </span>
       <i className="button" role="button" onClick={handleClick}>
         🗑️
       </i>

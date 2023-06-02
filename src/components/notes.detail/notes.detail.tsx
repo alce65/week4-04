@@ -9,6 +9,7 @@ export default function NotesDetails() {
   } = useContext(AppContext);
 
   console.log(notes);
+  console.log({ id });
 
   return (
     <header>
